@@ -1,6 +1,8 @@
+import ProjectList from "@/components/projectList";
 import Link from "next/link";
+import { supabase } from '../lib/supabaseClient';
 
-const Home = () => {
+const Home = ({ projects }) => {
   return (
     <>
       <section className="my-12">
@@ -10,8 +12,27 @@ const Home = () => {
           <button className="text-lg border-2 border-accentDark px-4 py-1 rounded-lg duration-500 hover:bg-accentDark hover:text-background">Get in Touch &rarr;</button>
         </Link>
       </section>
+      <section>
+        <h2 className="text-4xl font-bold">Projects</h2>
+        <ProjectList projects={projects} />
+        <Link href="/projects">
+          <button className="mt-6 text-lg text-accentDark hover:text-font">
+            view more &rarr;
+          </button>
+        </Link>
+      </section>
     </>
   );
 };
+
+export async function getStaticProps() {
+  const { data } = await supabase.from('projects').select('*');
+
+  return {
+    props: {
+      projects: data,
+    }
+  }
+}
 
 export default Home;

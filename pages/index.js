@@ -1,4 +1,4 @@
-import ProjectList from "@/components/projectList";
+import ProjectList from "../components/projectList";
 import Link from "next/link";
 import { supabase } from '../lib/supabaseClient';
 
@@ -15,11 +15,6 @@ const Home = ({ projects }) => {
       <section>
         <h2 className="text-4xl font-bold">Projects</h2>
         <ProjectList projects={projects} />
-        <Link href="/projects">
-          <button className="mt-6 text-lg text-accentDark hover:text-font">
-            view more &rarr;
-          </button>
-        </Link>
       </section>
     </>
   );
@@ -32,7 +27,7 @@ export async function getStaticProps() {
     props: {
       projects: data,
     }
-  }
+  };
 }
 
 export default Home;

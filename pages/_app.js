@@ -1,10 +1,18 @@
 import Layout from '../components/layouts/main';
 import '../styles/globals.css';
+import { Rubik } from '@next/font/google';
+
+const rubik = Rubik({
+  subsets: ['latin'],
+  variable: '--font-rubik'
+});
 
 const Website = ({ Component, pageProps }) => (
-  <Layout>
-    <Component {...pageProps} />
-  </Layout>
+  <div className={`${rubik.variable} font-sans`}>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </div>
 );
 
 export default Website;

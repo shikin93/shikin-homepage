@@ -4,7 +4,34 @@ import { AiFillInstagram, AiFillMail, AiFillLinkedin } from 'react-icons/ai';
 import { HiExternalLink } from 'react-icons/hi';
 import { BsArrowUpRight } from 'react-icons/bs';
 
-const tech = ["Javascript", "Node.js", "React", "Tailwindcss"];
+const tech = ["HTML5", "CSS3", "Javascript (ES6+)", "Node.js", "React", "Tailwindcss", "Git"];
+
+const certifications = [
+  {
+    nama: "Web Programming Basics",
+    credential: "https://www.dicoding.com/certificates/JLX1LVYYNX72"
+  },
+  {
+    nama: "JavaScript Programming Basics",
+    credential: "https://www.dicoding.com/certificates/JLX11RYRNX72"
+  },
+  {
+    nama: "Front-End Web Basics",
+    credential: "https://www.dicoding.com/certificates/4EXG912R9ZRL"
+  },
+  {
+    nama: "React Basic",
+    credential: "https://www.dicoding.com/certificates/NVP79NVVWZR0"
+  },
+  {
+    nama: "React Web Application Fundamental",
+    credential: "https://www.dicoding.com/certificates/4EXG934G1ZRL"
+  },
+  {
+    nama: "React Web Developer Expert",
+    credential: "https://www.dicoding.com/certificates/NVP79NNQ4ZR0"
+  }
+];
 
 const About = () => {
   return (
@@ -48,20 +75,25 @@ const About = () => {
                 <li key={item} className="flex items-center gap-2 mb-3">
                   <BsArrowUpRight />
                   {item}
-                  </li>
+                </li>
               ))
             }
           </ul>
         </section>
         <section className="my-8">
-          <h2 className="border-b-4 w-fit border-b-accentDark pb-2 mb-3 text-2xl font-bold">Certificate of Education</h2>
+          <h2 className="border-b-4 w-fit border-b-accentDark pb-2 mb-4 text-2xl font-bold">Certificate of Education</h2>
           <ul>
-            <Link href="https://www.dicoding.com/certificates/NVP79NNQ4ZR0" target="_blank">
-              <li className="flex items-end gap-2 hover:underline">
-                <HiExternalLink className="text-xl" />
-                <p>React Web Developer Expert</p>
-              </li>
-            </Link>
+            {
+              certifications.map((item) => (
+                <Link key={item.nama} href={item.credential} target="_blank">
+                  <li className="flex items-end gap-2 mb-3 hover:underline">
+                    <HiExternalLink className="text-xl" />
+                    <p>{item.nama}</p>
+                  </li>
+                </Link>
+
+              ))
+            }
           </ul>
         </section>
       </section>

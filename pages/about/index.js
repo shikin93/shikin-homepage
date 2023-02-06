@@ -37,7 +37,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Shikin / About me</title>
+        <title>About me / Shikin</title>
       </Head>
       <section className="my-12">
         <h1 className="text-5xl font-bold">About me</h1>

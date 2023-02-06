@@ -4,7 +4,8 @@ import { Rubik } from '@next/font/google';
 
 const rubik = Rubik({
   subsets: ['latin'],
-  variable: '--font-rubik'
+  variable: '--font-rubik',
+  preload: false
 });
 
 const Website = ({ Component, pageProps }) => (

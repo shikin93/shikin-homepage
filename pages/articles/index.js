@@ -20,7 +20,7 @@ const BlogPage = ({ allPosts }) => {
   return (
     <>
       <Head>
-        <title>Shikin - Blog</title>
+        <title>Blog / Shikin</title>
       </Head>
       <section className="my-12">
         <h1 className="text-5xl font-bold mb-8">Blog</h1>

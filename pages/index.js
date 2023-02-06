@@ -12,7 +12,7 @@ const Home = ({ projects }) => {
           <button className="text-lg border-2 border-accentDark px-4 py-1 rounded-lg duration-500 hover:bg-accentDark hover:text-background">Get in Touch &rarr;</button>
         </Link>
       </section>
-      <section>
+      <section className="my-12">
         <h2 className="text-4xl font-bold">Projects</h2>
         <ProjectList projects={projects} />
       </section>

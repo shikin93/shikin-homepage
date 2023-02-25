@@ -54,7 +54,7 @@ const Post = ({ post }) => {
       <article className="my-12">
         <div className="mb-16">
           <h1 className="text-5xl font-bold mb-2">{post.title}</h1>
-          <time dateTime={post.date} className="text-sm bg-accentSoft p-2 rounded-lg text-accentDark">
+          <time dateTime={post.date} className="text-sm bg-accentSoft p-2 rounded-lg text-font">
             {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
         </div>

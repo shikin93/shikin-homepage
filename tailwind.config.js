@@ -16,12 +16,13 @@ module.exports = {
         sans: ['var(--font-rubik)', ...fontFamily.sans],
       },
       colors: {
-        background: '#F7F7F7',
-        accentSoft: '#EEEEEE',
-        font: '#393E46',
-        accentDark: '#929AAB',
+        background: '#F1F6F9',
+        accentSoft: '#FF6E31',
+        font: '#16213E',
+        accentDark: '#8CC0DE',
       },
     },
   },
   plugins: [],
+  darkMode: 'class',
 }

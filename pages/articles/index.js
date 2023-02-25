@@ -23,7 +23,7 @@ const BlogPage = ({ allPosts }) => {
         <title>Blog / Shikin</title>
       </Head>
       <section className="my-12">
-        <h1 className="text-5xl font-bold mb-8">Blog</h1>
+        <h1 className="text-5xl font-bold mb-8 text-accentSoft">Blog</h1>
         {
           allPosts.map((post, idx) => (
             <div className="mb-3" key={idx}>

@@ -40,7 +40,7 @@ const About = () => {
         <title>About me / Shikin</title>
       </Head>
       <section className="my-12">
-        <h1 className="text-5xl font-bold">About me</h1>
+        <h1 className="text-5xl font-bold text-accentSoft">About me</h1>
         <section className="my-8 text-lg">
           <p>Hai, I&apos;m Chosiin</p>
           <p className="my-4">I&apos;m passionate about Coding, and I love spending my free time to Coding and learn about technology. I build web applications with React and I love sharing about web development specifically React.</p>
@@ -48,19 +48,19 @@ const About = () => {
         <aside className="my-8">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             <Link href="https://www.instagram.com/shikin.93/">
-              <div className="border-2 border-accentDark rounded-lg p-4 flex gap-1 hover:bg-accentDark hover:text-background">
+              <div className="border-2 border-font dark:border-background rounded-lg p-4 flex gap-1 hover:bg-accentDark hover:text-background">
                 <AiFillInstagram className="text-2xl" />
                 Instagram
               </div>
             </Link>
             <Link href="mailto:official.shiin@gmail.com">
-              <div className="border-2 border-accentDark rounded-lg p-4 flex gap-1 hover:bg-accentDark hover:text-background">
+              <div className="border-2 border-font dark:border-background rounded-lg p-4 flex gap-1 hover:bg-accentDark hover:text-background">
                 <AiFillMail className="text-2xl" />
                 Mail
               </div>
             </Link>
             <Link href="#">
-              <div className="border-2 border-accentDark rounded-lg p-4 flex gap-1 hover:bg-accentDark hover:text-background">
+              <div className="border-2 border-font dark:border-background rounded-lg p-4 flex gap-1 hover:bg-accentDark hover:text-background">
                 <AiFillLinkedin className="text-2xl" />
                 Linkedin
               </div>

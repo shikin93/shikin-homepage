@@ -6,7 +6,7 @@ const ProjectItem = ({
 }) => (
   <div className="bg-accentDark border-2 border-font dark:border-background p-6 rounded-lg dark:text-font flex flex-col justify-between">
     <div>
-      <button className="bg-font rounded-full w-fit p-2 text-background hover:bg-accentSoft">
+      <button name="source" className="bg-font rounded-full w-fit p-2 text-background hover:bg-accentSoft">
         <Link href={source} target="_blank">
           <VscSourceControl />
         </Link>

@@ -44,7 +44,7 @@ const Navbar = () => {
       <Popover className="md:hidden">
         {({ open }) => (
           <>
-            <Popover.Button className={`${open ? 'bg-accentDark' : ''} border-2 mx-5 border-accentDark hover:bg-accentDark rounded-md fixed z-40`}>
+            <Popover.Button name="menu" className={`${open ? 'bg-accentDark' : ''} border-2 mx-5 border-accentDark hover:bg-accentDark rounded-md fixed z-40`}>
               <HiMenuAlt1 className="text-3xl" />
             </Popover.Button>
             <Popover.Overlay className="fixed inset-0 bg-accentDark opacity-30" />

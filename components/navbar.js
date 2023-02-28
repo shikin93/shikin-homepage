@@ -44,10 +44,9 @@ const Navbar = () => {
       <Popover className="md:hidden">
         {({ open }) => (
           <>
-            <Popover.Button name="menu" className={`${open ? 'bg-accentDark' : ''} border-2 mx-5 border-accentDark hover:bg-accentDark rounded-md fixed z-40`}>
+            <Popover.Button aria-labelledby="Menu" className={`${open ? 'bg-accentGreen dark:text-font' : ''} border-2 mx-5 hover:text-font border-font dark:border-background hover:bg-accentGreen rounded-md fixed z-40`}>
               <HiMenuAlt1 className="text-3xl" />
             </Popover.Button>
-            <Popover.Overlay className="fixed inset-0 bg-accentDark opacity-30" />
             <Transition
               as={Fragment}
               enter="transition ease-out duration-300"
@@ -57,14 +56,13 @@ const Navbar = () => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-
               <Popover.Panel>
                 {({ close }) => (
                   <div className="bg-background dark:bg-font fixed w-full top-0 h-screen py-20 px-4">
                     {
                       navLink.map((item) => (
                         <Link key={item.name} href={item.href}>
-                          <div className="font-bold p-2 rounded-lg flex gap-4 hover:bg-accentSoft hover:text-background">
+                          <div className="font-bold hover:text-font p-2 rounded-lg flex gap-4 hover:bg-accentGreen">
                             <span className="text-xl">{item.icon}</span>
                             <button onClick={close}>
                               {item.name}
@@ -76,14 +74,16 @@ const Navbar = () => {
                     <div className="border-t-2 border-t-font dark:border-t-background mt-4 pt-4">
                       {currentTheme === 'dark' ? (
                         <button
-                          className="p-2 rounded-lg border border-background hover:bg-background text-background hover:text-font"
+                          aria-labelledby="buttonLight"
+                          className="p-2 rounded-lg hover:bg-accentGreen hover:text-font"
                           onClick={() => setTheme('light')}
                         >
                           <HiSun />
                         </button>
                       ) : (
                         <button
-                          className="p-2 rounded-lg border border-font hover:bg-font hover:text-background"
+                        aria-labelledby="buttonDark"
+                          className="p-2 rounded-lg hover:bg-accentGreen"
                           onClick={() => setTheme('dark')}
                         >
                           <HiMoon />
@@ -101,7 +101,7 @@ const Navbar = () => {
         <ul className="flex">
           {
             navLink.map((item) => (
-              <li key={item.name} className="py-1 px-2 rounded-lg hover:bg-accentSoft hover:text-background">
+              <li key={item.name} className="py-1 px-2 rounded-lg hover:bg-accentGreen hover:text-font">
                 <Link href={item.href}>{item.name}</Link>
               </li>
             ))
@@ -110,14 +110,14 @@ const Navbar = () => {
         <div>
           {currentTheme === 'dark' ? (
             <button
-              className="p-2 rounded-lg hover:bg-accentSoft hover:text-background"
+              className="p-2 rounded-lg hover:bg-accentGreen hover:text-font"
               onClick={() => setTheme('light')}
             >
               <HiSun />
             </button>
           ) : (
             <button
-              className="p-2 rounded-lg hover:bg-accentSoft hover:text-background"
+              className="p-2 rounded-lg hover:bg-accentGreen"
               onClick={() => setTheme('dark')}
             >
               <HiMoon />

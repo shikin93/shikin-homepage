@@ -23,7 +23,7 @@ const BlogPage = ({ allPosts }) => {
         <title>Blog / Shikin</title>
       </Head>
       <section className="my-12">
-        <h1 className="text-5xl font-bold mb-8 text-accentSoft">Blog</h1>
+        <h1 className="text-5xl font-bold mb-8">Blog</h1>
         {
           allPosts.map((post, idx) => (
             <div className="mb-3" key={idx}>
@@ -33,7 +33,7 @@ const BlogPage = ({ allPosts }) => {
               >
                 <h2 className="text-lg font-semibold hover:underline">{post.title}</h2>
               </Link>
-              <time dateTime={post.date} className="text-sm text-accentDark">
+              <time dateTime={post.date} className="text-sm text-slate-600">
                 {format(parseISO(post.date), "LLLL d, yyyy")}
               </time>
             </div>

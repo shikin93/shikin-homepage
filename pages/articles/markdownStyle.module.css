@@ -47,5 +47,5 @@
 }
 
 .markdown a {
-  @apply text-accentDark underline
+  @apply text-accentGreen underline
 }

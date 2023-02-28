@@ -4,9 +4,9 @@ import { VscSourceControl } from 'react-icons/vsc';
 const ProjectItem = ({
   title, body, tags, source, demo,
 }) => (
-  <div className="bg-accentDark border-2 border-font dark:border-background p-6 rounded-lg dark:text-font flex flex-col justify-between">
+  <div className="bg-accentGray dark:border-background p-6 rounded-lg dark:text-font flex flex-col justify-between">
     <div>
-      <button name="source" className="bg-font rounded-full w-fit p-2 text-background hover:bg-accentSoft">
+      <button aria-labelledby="source" className="bg-font rounded-full w-fit p-2 text-background hover:bg-accentGreen hover:text-font">
         <Link href={source} target="_blank">
           <VscSourceControl />
         </Link>

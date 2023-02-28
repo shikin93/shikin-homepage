@@ -6,8 +6,8 @@ const ProjectItem = ({
 }) => (
   <div className="bg-accentGray dark:border-background p-6 rounded-lg dark:text-font flex flex-col justify-between">
     <div>
-      <button aria-labelledby="source" className="bg-font rounded-full w-fit p-2 text-background hover:bg-accentGreen hover:text-font">
-        <Link href={source} target="_blank">
+      <button role="button" aria-label="source" className="bg-font rounded-full w-fit p-2 text-background hover:bg-accentGreen hover:text-font">
+        <Link aria-label="github source" href={source} target="_blank">
           <VscSourceControl />
         </Link>
       </button>

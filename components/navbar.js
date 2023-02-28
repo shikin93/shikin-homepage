@@ -44,7 +44,7 @@ const Navbar = () => {
       <Popover className="md:hidden">
         {({ open }) => (
           <>
-            <Popover.Button aria-labelledby="Menu" className={`${open ? 'bg-accentGreen dark:text-font' : ''} border-2 mx-5 hover:text-font border-font dark:border-background hover:bg-accentGreen rounded-md fixed z-40`}>
+            <Popover.Button role="button" aria-label="menu" className={`${open ? 'bg-accentGreen dark:text-font' : ''} border-2 mx-5 hover:text-font border-font dark:border-background hover:bg-accentGreen rounded-md fixed z-40`}>
               <HiMenuAlt1 className="text-3xl" />
             </Popover.Button>
             <Transition
@@ -73,16 +73,16 @@ const Navbar = () => {
                     }
                     <div className="border-t-2 border-t-font dark:border-t-background mt-4 pt-4">
                       {currentTheme === 'dark' ? (
-                        <button
-                          aria-labelledby="buttonLight"
+                        <button role="button"
+                          aria-label="button light"
                           className="p-2 rounded-lg hover:bg-accentGreen hover:text-font"
                           onClick={() => setTheme('light')}
                         >
                           <HiSun />
                         </button>
                       ) : (
-                        <button
-                        aria-labelledby="buttonDark"
+                        <button role="button"
+                          aria-label="button dark"
                           className="p-2 rounded-lg hover:bg-accentGreen"
                           onClick={() => setTheme('dark')}
                         >
@@ -109,14 +109,14 @@ const Navbar = () => {
         </ul>
         <div>
           {currentTheme === 'dark' ? (
-            <button
+            <button role="button" aria-label="button light"
               className="p-2 rounded-lg hover:bg-accentGreen hover:text-font"
               onClick={() => setTheme('light')}
             >
               <HiSun />
             </button>
           ) : (
-            <button
+            <button role="button" aria-label="button dark"
               className="p-2 rounded-lg hover:bg-accentGreen"
               onClick={() => setTheme('dark')}
             >
